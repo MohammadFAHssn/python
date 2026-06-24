@@ -28,3 +28,7 @@ Ctrl click to launch VS Code Native REPL
 >>> quit()
 PS E:\projects\python>
 ```
+
+## 1. Introduction to Python Data Types
+
+<img src="./pictures/1. Introduction to Python Data Types.png" width="700"/>
