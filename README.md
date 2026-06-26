@@ -6,7 +6,7 @@
 5. Installing Python (Step by Step)
 6. Installing Python on Windows and updated Jupyter Notebook Introduction
 
-# 01. Course Overview
+# 02. Python Setup
 
 ## 6. Running Python Code
 
@@ -29,6 +29,30 @@ Ctrl click to launch VS Code Native REPL
 PS E:\projects\python>
 ```
 
+# 03. Python Object and Data Structure Basics
+
 ## 1. Introduction to Python Data Types
 
-<img src="./pictures/1. Introduction to Python Data Types.png" width="700"/>
+<img src="./pictures/data-types.png" width="700" style="border: 1px solid black"/>
+
+# 9. Indexing and Slicing with Strings
+
+```python
+firstName = "Mohammad"
+print(firstName[3])  # a
+```
+
+<img src="./pictures/indexing-with-strings.png" width="250" style="padding: 10px; border: 1px solid black"/>
+
+slicing:
+
+```python
+[start(optional):stop(optional):step(optional)]
+```
+
+<img src="./pictures/slicing-with-strings.png" width="350" style="padding: 10px; border: 1px solid black"/>
+
+```python
+print("Mohammad"[::-1])  # dammahoM
+
+```
