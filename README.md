@@ -1,3 +1,7 @@
+## Contracts
+
+1. `??` means, I have a question.
+
 # Unwatched
 
 2. Course Introduction
@@ -54,5 +58,26 @@ slicing:
 
 ```python
 print("Mohammad"[::-1])  # dammahoM
+
+```
+
+## 12. String Properties and Methods
+
+```python
+print("M" + "H")  # MH
+print(10 * "q")  # qqqqqqqqqq
+```
+
+sounds like that the string in python is an object! ??
+
+```python
+x = 'something'
+print(x.upper()) # SOMETHING
+print(x.upper) # <built-in method upper of str object at 0x0000018CD78D4470>
+```
+
+```python
+x = "something"
+print(f"I wanna say {x}") # I wanna say something
 
 ```
