@@ -1,4 +1,4 @@
-## Contracts
+# Contracts
 
 1. `??` means, I have a question.
 
@@ -68,7 +68,7 @@ print("M" + "H")  # MH
 print(10 * "q")  # qqqqqqqqqq
 ```
 
-sounds like that the string in python is an object! ??
+string in python is class/object!
 
 ```python
 x = 'something'
@@ -81,3 +81,19 @@ x = "something"
 print(f"I wanna say {x}") # I wanna say something
 
 ```
+
+## Lists in Python
+
+indexing and slicing and concatenate in lists works just like a string in python
+
+list is also class/object!
+
+```python
+list = [5, 1, 8, 3]
+sorted_list = list.sort()
+print(list)  # [1, 3, 5, 8]
+print(sorted_list) # None
+print(type(sorted_list)) # <class 'NoneType'>
+```
+
+`NoneType` is a data type in Python and has only one value: None.
