@@ -39,7 +39,7 @@ PS E:\projects\python>
 
 <img src="./pictures/data-types.png" width="700" style="border: 1px solid black"/>
 
-# 9. Indexing and Slicing with Strings
+## 9. Indexing and Slicing with Strings
 
 ```python
 firstName = "Mohammad"
@@ -82,7 +82,7 @@ print(f"I wanna say {x}") # I wanna say something
 
 ```
 
-## Lists in Python
+## 18. Lists in Python
 
 indexing and slicing and concatenate in lists works just like a string in python
 
