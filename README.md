@@ -97,3 +97,11 @@ print(type(sorted_list)) # <class 'NoneType'>
 ```
 
 `NoneType` is a data type in Python and has only one value: None.
+
+## 22. Dictionaries in Python
+
+```python
+my_dic = {"key1": 1, "key2": "value2"}
+print(my_dic["key1"]) # 1
+my_dic["key3"] = "chem!"
+```
