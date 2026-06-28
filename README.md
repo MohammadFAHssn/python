@@ -105,3 +105,15 @@ my_dic = {"key1": 1, "key2": "value2"}
 print(my_dic["key1"]) # 1
 my_dic["key3"] = "chem!"
 ```
+
+## 28. Sets in Python
+
+```python
+s = {1, "a"}
+s.add("chem")
+```
+
+```python
+myList = [8, 10, 8, 8, 10, 1, 80, 80, 80, 10]
+print(set(myList))  # {8, 1, 10, 80}
+```
