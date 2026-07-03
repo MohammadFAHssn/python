@@ -114,6 +114,6 @@ s.add("chem")
 ```
 
 ```python
-myList = [8, 10, 8, 8, 10, 1, 80, 80, 80, 10]
+myList = [8, 10, 8, 8, 10, 1, 80, 80, 80, 10] # can be a string too!
 print(set(myList))  # {8, 1, 10, 80}
 ```
