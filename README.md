@@ -117,3 +117,40 @@ s.add("chem")
 myList = [8, 10, 8, 8, 10, 1, 80, 80, 80, 10] # can be a string too!
 print(set(myList))  # {8, 1, 10, 80}
 ```
+
+## 32. IO with Basic Files in Python
+
+the methods we show here will also expand further to working with other file types.
+
+```python
+myFile = open("test.txt")
+readMyFile = myFile.read()
+print(readMyFile)
+print(myFile.read()) # ''
+```
+
+the reason this is happening is because you can imagine that there's a cursor at the beginning of the file and when you read it the cursor goes all the way to the end of the file and you need to reset the cursor or seek it back to zero in order to read it again
+
+```python
+myFile.seek(0)
+```
+
+```python
+myFile = open("E:\\projects\\python\\test.txt")
+print(myFile.readlines())
+# [
+# 'Hello\n',
+# 'this is a test text file\n',
+# 'this is the second line\n',
+# 'this is the third line '
+# ]
+myFile.close()
+```
+
+```python
+with open("test.txt", "a") as myFile:
+    readMyFile = myFile.write("this is the forth line")
+print(readMyFile)
+```
+
+<img src="./pictures/IO-with-basic-files.png" width="550" style="padding: 10px; border: 1px solid black"/>
