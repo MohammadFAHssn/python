@@ -157,7 +157,7 @@ print(readMyFile)
 
 # 05. Python Statements
 
-## For Loops in Python
+## For Loops in Python & ...
 
 ```python
 for _ in "Hello world!":
@@ -206,4 +206,14 @@ print(enumerate(text))  # !
 print(type(enumerate(text)))  # <class 'enumerate'>
 # I think, i think, in python we don't have (index, value) in common for loop,
 # we have to use enumerate to have (index, value)
+```
+
+## 4.Useful Operators in Python
+
+```python
+print(1 in [10, 1])  # True
+print("a" in "bcd")  # False
+dic = {"k1": 1, "k2": 2}
+print("k1" in dic)  # or "in dic.keys()"  # True
+print(1 in dic.values())  # True
 ```
