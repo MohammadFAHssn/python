@@ -154,3 +154,56 @@ print(readMyFile)
 ```
 
 <img src="./pictures/IO-with-basic-files.png" width="550" style="padding: 10px; border: 1px solid black"/>
+
+# 05. Python Statements
+
+## For Loops in Python
+
+```python
+for _ in "Hello world!":
+    print("cool!")
+```
+
+```python
+list = [(1, 2), (3, 4)]
+for a, b in list: # or (a, b)
+    print(a)
+    print(b)
+```
+
+```python
+dic = {"k1": 1, "k2": 2, "k3": 3}
+for item in dic:
+    print(item)  # k1
+print(dic.items())
+# dict_items([('k1', 1), ('k2', 2), ('k3', 3)])
+print(type(dic.items()))
+# <class 'dict_items'>
+for item in dic.items():  # or key, value
+    print(item)  # ('k1', 1)
+    print(type(item))  # <class 'tuple'>
+print(type(dic.values()))
+# <class 'dict_values'>
+for value in dic.values():
+    print(value)  # 1
+```
+
+```python
+print(range(5))  # range(0, 5)
+print(type(range(5)))  # <class 'range'>
+print(list(range(5)))  # [0, 1, 2, 3, 4]
+# here we cast
+for i in range(2, 5, 1):
+    print(i)  # 2 3 4
+```
+
+```python
+text = "I love python!"
+for item in enumerate(text):
+    print(item)  # (0, 'I')
+    print(type(item))  # <class 'tuple'>
+print(enumerate(text))  # !
+print(type(enumerate(text)))  # <class 'enumerate'>
+# I think, i think, in python we don't have (index, value) in common for loop,
+# we have to use enumerate to have (index, value)
+```
