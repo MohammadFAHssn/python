@@ -217,3 +217,15 @@ dic = {"k1": 1, "k2": 2}
 print("k1" in dic)  # or "in dic.keys()"  # True
 print(1 in dic.values())  # True
 ```
+
+```python
+from random import shuffle
+
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+shuffle(list)
+print(list)  # [2, 8, 7, 6, 1, 3, 5, 4, 9, 10]
+
+number = input("Enter a number: ")
+print(float(number))
+
+```
