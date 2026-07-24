@@ -229,3 +229,27 @@ number = input("Enter a number: ")
 print(float(number))
 
 ```
+
+## 5. List Comprehensions in Python
+
+So if you're ever in a situation where you find yourself using a for loop along with an append statement to create a list, list comprehensions are a good alternative
+
+```python
+s = "Hello"
+list = [letter for letter in s]
+print(list)
+
+list2 = [num**2 for num in range(10)]
+print(list2)
+
+list3 = [num for num in range(10) if num % 2 == 0]
+print(list3)
+
+list4 = [num if num % 2 == 0 else "odd" for num in range(10)]
+print(list4)
+
+# ['H', 'e', 'l', 'l', 'o']
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+# [0, 2, 4, 6, 8]
+# [0, 'odd', 2, 'odd', 4, 'odd', 6, 'odd', 8, 'odd']
+```
