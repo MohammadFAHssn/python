@@ -58,7 +58,6 @@ slicing:
 
 ```python
 print("Mohammad"[::-1])  # dammahoM
-
 ```
 
 ## 12. String Properties and Methods
@@ -71,15 +70,14 @@ print(10 * "q")  # qqqqqqqqqq
 string in python is class/object!
 
 ```python
-x = 'something'
-print(x.upper()) # SOMETHING
-print(x.upper) # <built-in method upper of str object at 0x0000018CD78D4470>
+x = "something"
+print(x.upper())  # SOMETHING
+print(x.upper)  # <built-in method upper of str object at 0x0000018CD78D4470>
 ```
 
 ```python
 x = "something"
-print(f"I wanna say {x}") # I wanna say something
-
+print(f"I wanna say {x}")  # I wanna say something
 ```
 
 ## 18. Lists in Python
@@ -92,8 +90,8 @@ list is also class/object!
 list = [5, 1, 8, 3]
 sorted_list = list.sort()
 print(list)  # [1, 3, 5, 8]
-print(sorted_list) # None
-print(type(sorted_list)) # <class 'NoneType'>
+print(sorted_list)  # None
+print(type(sorted_list))  # <class 'NoneType'>
 ```
 
 `NoneType` is a data type in Python and has only one value: None.
@@ -102,7 +100,7 @@ print(type(sorted_list)) # <class 'NoneType'>
 
 ```python
 my_dic = {"key1": 1, "key2": "value2"}
-print(my_dic["key1"]) # 1
+print(my_dic["key1"])  # 1
 my_dic["key3"] = "chem!"
 ```
 
@@ -114,7 +112,7 @@ s.add("chem")
 ```
 
 ```python
-myList = [8, 10, 8, 8, 10, 1, 80, 80, 80, 10] # can be a string too!
+myList = [8, 10, 8, 8, 10, 1, 80, 80, 80, 10]  # can be a string too!
 print(set(myList))  # {8, 1, 10, 80}
 ```
 
@@ -126,7 +124,7 @@ the methods we show here will also expand further to working with other file typ
 myFile = open("test.txt")
 readMyFile = myFile.read()
 print(readMyFile)
-print(myFile.read()) # ''
+print(myFile.read())  # ''
 ```
 
 the reason this is happening is because you can imagine that there's a cursor at the beginning of the file and when you read it the cursor goes all the way to the end of the file and you need to reset the cursor or seek it back to zero in order to read it again
@@ -166,7 +164,7 @@ for _ in "Hello world!":
 
 ```python
 list = [(1, 2), (3, 4)]
-for a, b in list: # or (a, b)
+for a, b in list:  # or (a, b)
     print(a)
     print(b)
 ```
@@ -227,7 +225,6 @@ print(list)  # [2, 8, 7, 6, 1, 3, 5, 4, 9, 10]
 
 number = input("Enter a number: ")
 print(float(number))
-
 ```
 
 ## 5. List Comprehensions in Python
@@ -252,4 +249,87 @@ print(list4)
 # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 # [0, 2, 4, 6, 8]
 # [0, 'odd', 2, 'odd', 4, 'odd', 6, 'odd', 8, 'odd']
+```
+
+# 06. Methods and Functions
+
+```python
+def my_func(param="default"):  # snake_casing
+    """
+    DocString explains function.
+    """
+    print(param)
+
+
+my_func("someThing")
+```
+
+## 7. Tuple Unpacking with Python Functions
+
+```python
+def my_func():
+    return (1, 2)
+
+
+a, b = my_func()
+print(a)
+print(b)
+```
+
+```python
+def player_guess():
+    guess = ""
+
+    while guess not in ["1", "2", "3"]:
+        guess = input("guess a number between (1, 2, 3): ")
+
+    return guess
+
+
+player_guess()
+```
+
+## 18. args and kwargs in Python
+
+```python
+def my_func(*aaargs):
+    print(type(aaargs))  # <class 'tuple'>
+    print(aaargs)  # (1, 'a', -10.2)
+
+
+my_func(1, "a", -10.2)
+```
+
+```python
+def my_func(**kwargs):
+    print(type(kwargs))  # <class 'dict'>
+    print(kwargs)  # {'a': 1, 'b': 2}
+
+
+my_func(a=1, b=2)
+```
+
+## 27. Lambda Expressions, Map, and Filter Functions
+
+```python
+def square(num):
+    return num**2
+
+
+nums = [3, 1, 5]
+
+m = map(square, nums)
+
+print(m)
+print(type(m))
+print(list(m))
+
+for item in m:
+    print(item)
+# The output of `map` is an **iterator**, and it can only be iterated over once.
+
+# The filter function works the same way.
+
+square = lambda num: num**2
+
 ```
