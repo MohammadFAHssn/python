@@ -333,3 +333,23 @@ for item in m:
 square = lambda num: num**2
 
 ```
+
+## 28. Nested Statements and Scope
+
+When you create a variable name in Python, that name is stored in what's called the namespace. And variable names also have a scope, and the scope determines the visibility of that variable name to other parts of your code
+
+```python
+x = 1
+
+
+def my_func():
+    print(x)
+
+
+def my_func2():
+    y = 3
+
+
+my_func()
+# print(y) # error
+```
