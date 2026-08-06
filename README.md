@@ -39,6 +39,10 @@ PS E:\projects\python>
 
 <img src="./pictures/data-types.png" width="700" style="border: 1px solid black"/>
 
+- the name of variables should be snake_case
+
+- everything in Python is an object
+
 ## 9. Indexing and Slicing with Strings
 
 ```python
@@ -352,4 +356,29 @@ def my_func2():
 
 my_func()
 # print(y) # error
+```
+
+# 08. Object Oriented Programming
+
+## 1. Object Oriented Programming - Introduction
+
+<img src="./pictures/OOP-introduction.png" width="300" style="padding: 10px; border: 1px solid black"/>
+
+the name of class should be camelCase
+
+If we want a function inside a class to be an instance method, we have to pass `self` as its first parameter.
+
+```python
+class MyClass:
+    a = 1
+
+    def __init__(self):
+        # chem!
+        print(MyClass.a)
+        pass
+
+
+my_class1 = MyClass()
+print(my_class1.a)
+print(MyClass.a)
 ```
