@@ -439,5 +439,25 @@ print(str(c1))  # someThing!
 print(c1)  # someThing!
 print(len(c1))  # 0
 del c1  # deleted!
+```
+
+# 09. Modules and Packages
+
+## 2. Pip Install and PyPi
+
+PyPi is a repository for open-source third party Python packages like NPM for Node.js.
+
+```python
+# pip install colorama
+from colorama import init
+from colorama import Fore
+
+init()
+print(Fore.RED + "someThing red!")
+print(Fore.GREEN + "someThing green!")
+print(Fore.YELLOW + "someThing yellow!")
+print(Fore.BLUE + "someThing blue!")
+print(Fore.MAGENTA + "someThing magenta!")
+print(Fore.CYAN + "someThing cyan!")
 
 ```
