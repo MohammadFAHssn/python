@@ -4,11 +4,7 @@
 
 # Unwatched
 
-2. Course Introduction
-3. Course Curriculum Overview
-4. Why Python
-5. Installing Python (Step by Step)
-6. Installing Python on Windows and updated Jupyter Notebook Introduction
+1. Polymorphism
 
 # 02. Python Setup
 
@@ -335,7 +331,6 @@ for item in m:
 # The filter function works the same way.
 
 square = lambda num: num**2
-
 ```
 
 ## 28. Nested Statements and Scope
@@ -381,4 +376,68 @@ class MyClass:
 my_class1 = MyClass()
 print(my_class1.a)
 print(MyClass.a)
+```
+
+```python
+class Animal:
+    can_talk = False
+
+    def __init__(self, is_alive):
+        print("animal is created!")
+        self.is_alive = is_alive
+
+    def die(self, by):
+        self.is_alive = False
+        print(f"it die by {by}")
+
+
+class Dog(Animal):
+    def __init__(self):
+        print("dog is created")
+
+
+dog1 = Dog()
+print(dog1.is_alive)  # AttributeError: 'Dog' object has no attribute 'is_alive'
+print("dog1.can_talk: " + str(dog1.can_talk))
+dog1.die("accident")
+print("dog1.is_alive next to call .die method: " + str(dog1.is_alive))
+```
+
+```python
+class Animal:
+    def __init__(self, is_alive):
+        self.is_alive = is_alive
+
+
+class Dog(Animal):
+    def __init__(self, is_alive):
+        Animal.__init__(self, is_alive)
+        pass
+
+
+dog1 = Dog(True)
+print(dog1.is_alive)
+```
+
+```python
+class C:
+    def __init__(self):
+        pass
+
+    def __str__(self):
+        return "someThing!"
+
+    def __len__(self):
+        return 0
+
+    def __del__(self):
+        print("deleted!")
+
+
+c1 = C()
+print(str(c1))  # someThing!
+print(c1)  # someThing!
+print(len(c1))  # 0
+del c1  # deleted!
+
 ```
