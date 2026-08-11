@@ -459,5 +459,69 @@ print(Fore.YELLOW + "someThing yellow!")
 print(Fore.BLUE + "someThing blue!")
 print(Fore.MAGENTA + "someThing magenta!")
 print(Fore.CYAN + "someThing cyan!")
-
 ```
+
+## 3. Modules and Packages
+
+how to write your own modules and packages
+
+- `modules`, it's really just a .py script but `packages` are then a collection of modules. However, there's a key .py script called `__init__.py` that needs to be placed inside of a folder. you don't actually need to write anything in this file. It just needs to be there so that when Python goes searching through these packages it understands that it's not just a normal directory, it's an actual package. that way you can have different folders for different packages.
+
+<section style="
+padding: 10px; 
+border: 1px solid #0000003f;
+border-radius: 5px;
+margin-bottom: 20px
+">
+
+`myModule.py`:
+
+```python
+def my_func():
+    print("this is my_func!")
+```
+
+`myProgram.py`
+
+```python
+from myModule import my_func
+
+my_func()
+```
+
+</section>
+
+<section style="
+padding: 10px; 
+border: 1px solid #0000003f;
+border-radius: 5px;
+margin-bottom: 20px
+">
+
+<img src="./pictures/Modules and Packages.png" width="200" style="padding: 10px; border: 1px solid black"/>
+
+`some_main_script.py`:
+
+```python
+def sub_main():
+    print("I am some_main_script!")
+```
+
+`mySubScript.py`:
+
+```python
+def sub_report():
+    print("I am mySubScript!")
+```
+
+`myProgram.py`
+
+```python
+from MyMainPackage import some_main_script
+from MyMainPackage.SubPackage import mySubScript
+
+some_main_script.sub_main()
+mySubScript.sub_report()
+```
+
+</section>
