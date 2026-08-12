@@ -477,6 +477,8 @@ margin-bottom: 20px
 `myModule.py`:
 
 ```python
+print("!")
+
 def my_func():
     print("this is my_func!")
 ```
@@ -488,6 +490,8 @@ from myModule import my_func
 
 my_func()
 ```
+
+in here the `!` is printed!
 
 </section>
 
@@ -525,3 +529,39 @@ mySubScript.sub_report()
 ```
 
 </section>
+
+## 4. `__name__` and `__main__`
+
+in Python there is actually a built-in variable called `__name__`. this variable gets assigned a string depending on how you're running the actual script. And if you run the script directly So if I went to the command line, what Python is going to do it's going to assign this built-in variable called `__name__` to be equal to `"__main__"`.
+
+```python
+# You have all your functions and classes defined up here
+
+
+class SomeClass1:
+    pass
+
+
+class SomeClass2:
+    pass
+
+
+class SomeClass3:
+    pass
+
+
+def some_func_1():
+    pass
+
+
+def some_func_2():
+    pass
+
+
+if __name__ == "__main__":
+    # run the script just like as C++ that have main()
+    # your logic where you actually execute things are defined here at the bottom
+    some_func_1()
+    some_func_2()
+
+```
