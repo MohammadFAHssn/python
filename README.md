@@ -479,6 +479,7 @@ margin-bottom: 20px
 ```python
 print("!")
 
+
 def my_func():
     print("this is my_func!")
 ```
@@ -563,5 +564,56 @@ if __name__ == "__main__":
     # your logic where you actually execute things are defined here at the bottom
     some_func_1()
     some_func_2()
+```
 
+# 10. Errors and Exceptions Handling
+
+## 1. Errors and Exception Handling
+
+```python
+try:
+    pass
+except TypeError:
+    pass
+except:
+    # except for any errors
+    pass
+# if you go to the documentation you can come to "errors and exceptions",
+# you'll notice there's a link here to "built-in exceptions"
+finally:
+    pass
+```
+
+## 6. Running tests with the Unittest Library
+
+So unit test allows you to write your own test program. the goal is to send a specific set of data to your program, analyze the returned results and then see if it actually gives you the expected result.
+
+`cap.py`:
+
+```python
+def cap_text(text):
+    return text.capitalize()
+```
+
+`test_cap_or_anyThing.py`:
+
+```python
+import unittest
+import cap
+
+
+class TestCapOrChem(unittest.TestCase):
+    def test_one_word(self):
+        text = "alaki"
+        result = cap.cap_text(text)
+        self.assertEqual(result, "Alaki")
+
+    def test_multiple_words(self):
+        text = "alaki malaki"
+        result = cap.cap_text(text)
+        self.assertEqual(result, "Alaki Malaki")
+
+
+if __name__ == "__main__":
+    unittest.main()
 ```
