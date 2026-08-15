@@ -617,3 +617,58 @@ class TestCapOrChem(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 ```
+
+# 12. Python Decorators
+
+## 1. Decorators with Python Overview
+
+decorators allow you to, quote, decorate a function.
+
+Imagine that you created a function and now you want to add some more functionality to it or in other words, add more code. What you could do is take your original simple function then add some more stuff to it.
+
+```python
+def example_func():
+    print("example!")
+
+
+copy_of = example_func
+
+copy_of()
+
+del example_func
+
+copy_of()
+```
+
+```python
+def func_needs_some_decoration():
+    print("this is the func that needs some decoration!")
+
+
+def the_decorator(original_func):
+
+    def wrap_func():
+
+        print("some decoration first!")
+
+        original_func()
+
+        print("some decoration in the end!")
+
+    return wrap_func
+
+
+decorated_func = the_decorator(func_needs_some_decoration)
+
+decorated_func()
+
+# --------------
+
+
+@the_decorator
+def func_needs_some_decoration_2():
+    print(" 2 this is the func that needs some decoration!")
+
+
+func_needs_some_decoration_2()
+```
